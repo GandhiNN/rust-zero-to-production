@@ -1,5 +1,5 @@
 [package]
-name = "zero2prod"
+name = "zero-to-production"
 version = "0.1.0"
 edition = "2021"
 
@@ -17,9 +17,13 @@ path = "src/lib.rs"
 # have a look at the workspace feature - we'll cover it later on.
 [[bin]]
 path = "src/main.rs"
-name = "zero2prod"
+name = "zero-to-production"
 
 [dependencies]
 actix-web = "4"
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+reqwest = "0.11"
+
+# Dev dependencies are used exclusively when running tests or examples
+[dev-dependencies]
 reqwest = "0.11"
